@@ -13,6 +13,12 @@ $green: rgb(71, 177, 71);
     background-color: $light_black;
     overflow: hidden;
 
+    &.responsive{
+        @media screen and (max-width: 600px){
+            position: relative;
+        }
+    }
+
     a {
         float: left;
         color: $beige;
@@ -29,8 +35,51 @@ $green: rgb(71, 177, 71);
         &.active {
             background-color: $green;
         }
+
+        &.icon{
+            display: none;
+        }
+    }
+
+    a:not(:first-child) {
+        @media screen and (max-width: 600px){
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .top_nav a.icon{
+        float: right;
+        display: block;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .top_nav.responsive {
+        position: relative;
+    }
+
+    .top_nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top_nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
 
 
 
