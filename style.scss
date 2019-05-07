@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$light_black: rgb(59, 55, 55);
+$beige: #f1eded;
+$light_gray: rgba(86, 110, 92, 0.897);
+$green: rgb(71, 177, 71);
+
+.top_nav {
+    background-color: $light_black;
+    overflow: hidden;
+
+    a {
+        float: left;
+        color: $beige;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+
+        &:hover {
+            background-color: $light_gray;
+            color: black;
+        }
+
+        &.active {
+            background-color: $green;
+        }
+    }
+}
+
+
+
+
+
+
